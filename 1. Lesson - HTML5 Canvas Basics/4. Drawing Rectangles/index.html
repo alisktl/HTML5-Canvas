@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+	</head>
+	<body>
+		<canvas id="c" width="500" height="500"></canvas>
+
+		<script>
+			var c = document.querySelector("#c");
+			var ctx = c.getContext("2d");
+
+			ctx.fillRect(100, 100, 100, 100);
+			ctx.strokeRect(50, 50, 50, 50);
+
+			ctx.fillStyle = "blue";
+			// Start at (0,0) and draw a 50px x 50px blue rectangle.
+			ctx.fillRect(200, 200, 50, 50);
+			// Start at (0,0) and clear a 25px x 25px rectangle.
+			ctx.clearRect(200, 200, 25, 25);
+		</script
+	</body>
+</html>
