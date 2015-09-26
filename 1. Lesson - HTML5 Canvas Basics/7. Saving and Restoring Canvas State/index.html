@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+	</head>
+	<body>
+		<canvas id="c" width="500" height="500"></canvas>
+
+		<script>
+			var c = document.querySelector("#c");
+			var ctx = c.getContext("2d");
+
+			// 1st variant
+			ctx.fillStyle = "blue";
+			ctx.fillRect(0,0,50,50);
+
+			ctx.fillStyle = "green"
+			ctx.fillRect(100,100,10,10);
+
+			ctx.fillStyle = "blue";
+			ctx.fillRect(200,10,20,20);
+
+
+			// 2nd variant. BETTER VARIANT
+			ctx.fillStyle = "blue";
+			ctx.fillRect(0,300,50,50);
+
+			// Save state with blue fill
+			ctx.save();
+			ctx.fillStyle = "green";
+			ctx.fillRect(100,400,10,10);
+			// Restore to blue fill
+			ctx.restore();
+
+			ctx.fillRect(200,310,20,20);
+		</script
+	</body>
+</html>

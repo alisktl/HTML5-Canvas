@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+	</head>
+	<body>
+		<canvas id="c" width="500" height="500"></canvas>
+
+		<script>
+			var c = document.querySelector("#c");
+			var ctx = c.getContext("2d");
+
+			ctx.save();
+			ctx.fillStyle = 'blue';
+			ctx.translate(20,20);
+			ctx.fillRect(0,0,50,50);
+			ctx.restore();
+
+			ctx.rotate(Math.PI/4);
+			ctx.translate(100,0);
+			ctx.fillStyle = 'green';
+			ctx.fillRect(0,0, 50, 50);
+		</script
+	</body>
+</html>
